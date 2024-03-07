@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-gray-50 text-gray-950 relative `}>
         <div className=" flex ">
-          <div className="bg-purple-200  animate-pulse transition absolute top-[-6rem] right-0 h-[15.25rem] -z-10 w-[15.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+          <div className="bg-purple-200 absolute top-[-6rem] right-0 h-[15.25rem] -z-10 w-[15.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
           <div className="bg-blue-200 absolute   top-[-6rem]  h-[15.25rem] -z-10 w-[15.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] "></div>
         </div>
         <Header />
