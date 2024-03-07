@@ -13,7 +13,7 @@ const Intro = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="flex  transition ease-in duration-700   md:flex-row flex-col-reverse items-center justify-center gap-10 w-full h-full mt-20 "
+      className="flex mb-40 transition ease-in duration-700   md:flex-row flex-col-reverse items-center justify-center gap-10 w-full h-full mt-20 "
     >
       <div className="flex flex-col justify-between gap-10 ">
         <div className=" text-lg sm:text-3xl  [word-spacing:0.5rem] w-60  sm:w-[17rem]">
@@ -26,27 +26,46 @@ const Intro = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <div className="flex gap-3 flex-col sm:flex-row">
+          <div className="flex gap-3 flex-col sm:flex-row ">
             <Link
               href="#contact"
-              className="flex items-center gap-4 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full"
+              className="focus:scale-110 hover:scale-110 active:scale-105 transition flex items-center gap-4 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full"
             >
               Contact Me her <HiOutlineArrowLongRight />
             </Link>
-            <button className="flex items-center gap-4 bg-white shadow-xl hover:bg-gray-700 hover:text-white text-gray-950 font-bold py-2 px-4 rounded-full">
+            <Link
+              href="/Cv.pdf"
+              //   download
+              className="focus:scale-110 hover:scale-110 active:scale-105 transition flex items-center gap-4 bg-white shadow-xl hover:bg-gray-700 hover:text-white text-gray-950 font-bold py-2 px-4 rounded-full"
+            >
               Download CV <TfiDownload />
-            </button>
+            </Link>
           </div>
           <button className="flex gap-5 justify-evenly sm:justify-normal flex-row font-bold py-2 pl-4 text-3xl rounded-full">
-            <BsLinkedin className="hover:text-blue-600" />
-            <FaWhatsapp className="hover:text-green-600" />
-            <FaGithub className="hover:text-red-800" />
+            <Link
+              href="https://www.linkedin.com/in/reyad-mousa-81956821a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIIpdr2YdRO6S22J4naVwnA%3D%3D"
+              className="focus:scale-110 hover:scale-110 active:scale-105 transition hover:text-blue-600"
+            >
+              <BsLinkedin />
+            </Link>
+            <Link
+              href="https://whatsapp.com/"
+              className="focus:scale-110 hover:scale-110 active:scale-105 transition hover:text-green-600"
+            >
+              <FaWhatsapp />
+            </Link>
+            <Link
+              href="https://github.com/Reyad-Mousa"
+              className="focus:scale-110 hover:scale-110 active:scale-105 transition hover:text-red-800"
+            >
+              <FaGithub />
+            </Link>
           </button>
         </motion.div>
       </div>
       <div className=" relative">
         <Image
-          className=" relative w-60  shadow-2xl"
+          className=" relative  w-64  shadow-2xl"
           src="/myImage.jpg"
           height={100}
           width={200}
