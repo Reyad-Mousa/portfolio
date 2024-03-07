@@ -21,7 +21,7 @@ const Intro = () => {
           <span className="font-bold ">React (Next.js).</span>
         </div>
         <div className="flex gap-3  flex-col">
-          <div className="flex gap-3 flex-col ">
+          <div className="flex gap-3 flex-col sm:flex-row">
             <button className="flex items-center gap-4 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">
               Contact Me her <HiOutlineArrowLongRight />
             </button>
@@ -29,7 +29,7 @@ const Intro = () => {
               Download CV <TfiDownload />
             </button>
           </div>
-          <button className="flex gap-5 justify-evenly flex-row font-bold py-2 pl-4 text-3xl rounded-full">
+          <button className="flex gap-5 justify-evenly sm:justify-normal flex-row font-bold py-2 pl-4 text-3xl rounded-full">
             <BsLinkedin className="hover:text-blue-600" />
             <FaWhatsapp className="hover:text-green-600" />
             <FaGithub className="hover:text-red-800" />
