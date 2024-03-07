@@ -6,12 +6,13 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { TfiDownload } from "react-icons/tfi";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 const Intro = () => {
   return (
     <motion.section
-      animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       className="flex  transition ease-in duration-700   md:flex-row flex-col-reverse items-center justify-center gap-10 w-full h-full mt-20 "
     >
       <div className="flex flex-col justify-between gap-10 ">
@@ -20,11 +21,18 @@ const Intro = () => {
           <span className="font-bold ">Frontend Developer</span> My work using{" "}
           <span className="font-bold ">React (Next.js).</span>
         </div>
-        <div className="flex gap-3  flex-col">
+        <motion.div
+          className="flex gap-3  flex-col"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
           <div className="flex gap-3 flex-col sm:flex-row">
-            <button className="flex items-center gap-4 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">
+            <Link
+              href="#contact"
+              className="flex items-center gap-4 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full"
+            >
               Contact Me her <HiOutlineArrowLongRight />
-            </button>
+            </Link>
             <button className="flex items-center gap-4 bg-white shadow-xl hover:bg-gray-700 hover:text-white text-gray-950 font-bold py-2 px-4 rounded-full">
               Download CV <TfiDownload />
             </button>
@@ -34,7 +42,7 @@ const Intro = () => {
             <FaWhatsapp className="hover:text-green-600" />
             <FaGithub className="hover:text-red-800" />
           </button>
-        </div>
+        </motion.div>
       </div>
       <div className=" relative">
         <Image
