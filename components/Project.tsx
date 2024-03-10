@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHead from "./SectionHead";
 import { projectsData } from "@/lib/data";
+import Image from "next/image";
 
 const Project = () => {
   return (
@@ -21,5 +22,45 @@ export default Project;
 
 type projectProps = (typeof projectsData)[number];
 function Projects({ title, description, tags, imageUrl }: projectProps) {
-  return <div>{title}</div>;
+  return (
+    <section
+      className=" group rounded-lg relative flex flex-row gap-4 mb-9 bg-gray-100 max-w-[42rem]  border border-black/5 overflow-hidden
+    hover:bg-gray-200 transition"
+    >
+      <div
+        className=" flex flex-col  p-5 sm:py-12 gap-3 max-w-[60%]
+      group-even:ml-[20rem]  "
+      >
+        <h2 className="text-xl font-bold">{title}</h2>
+        <p>{description}</p>
+        <ul className="flex flex-wrap gap-3">
+          {tags.map((tag, index) => (
+            <li
+              className="bg-gray-800 text-white px-3 py-1 rounded-full"
+              key={index}
+            >
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </div>{" "}
+      <Image
+        className="w-[29rem] absolute -right-60 sm:-right-40 top-20 sm:top-8  rounded-lg shadow-2xl
+        group-even:right-[initial] group-even:-left-40 transition
+        group-even:top-64
+        group-hover:scale-[1.04]
+
+        group-hover:-translate-x-3
+        group-hover:translate-y-3
+        group-hover:-rotate-2
+        
+        group-even:group-hover:translate-x-3
+        group-even:group-hover:-translate-y-3
+        group-even:group-hover:rotate-2"
+        src={imageUrl}
+        alt="Project I Worked on"
+        quality={95}
+      />
+    </section>
+  );
 }
