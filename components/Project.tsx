@@ -24,7 +24,7 @@ type projectProps = (typeof projectsData)[number];
 function Projects({ title, description, tags, imageUrl }: projectProps) {
   return (
     <section
-      className=" group rounded-lg relative flex flex-col sm:flex-row gap-4 mb-9 bg-gray-100 max-w-[42rem]  border border-black/5 overflow-hidden
+      className=" group rounded-lg relative flex flex-col sm:flex-row gap-4 mb-9 bg-gray-100 max-w-[42rem] sm:max-h-[20rem] min-h-[20rem] border border-black/5 overflow-hidden
     hover:bg-gray-200 transition"
     >
       <div
