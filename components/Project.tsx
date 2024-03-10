@@ -24,12 +24,12 @@ type projectProps = (typeof projectsData)[number];
 function Projects({ title, description, tags, imageUrl }: projectProps) {
   return (
     <section
-      className=" group rounded-lg relative flex flex-row gap-4 mb-9 bg-gray-100 max-w-[42rem]  border border-black/5 overflow-hidden
+      className=" group rounded-lg relative flex flex-col sm:flex-row gap-4 mb-9 bg-gray-100 max-w-[42rem]  border border-black/5 overflow-hidden
     hover:bg-gray-200 transition"
     >
       <div
-        className=" flex flex-col  p-5 sm:py-12 gap-3 max-w-[60%]
-      group-even:ml-[20rem]  "
+        className=" flex flex-col  p-5 sm:py-12 gap-3 sm:max-w-[60%]
+         sm:group-even:ml-[18rem]  "
       >
         <h2 className="text-xl font-bold">{title}</h2>
         <p>{description}</p>
@@ -43,11 +43,10 @@ function Projects({ title, description, tags, imageUrl }: projectProps) {
             </li>
           ))}
         </ul>
-      </div>{" "}
+      </div>
       <Image
-        className="w-[29rem] absolute -right-60 sm:-right-40 top-20 sm:top-8  rounded-lg shadow-2xl
-        group-even:right-[initial] group-even:-left-40 transition
-        group-even:top-64
+        className="w-[29rem]  sm:absolute  sm:-right-48  sm:top-8  rounded-lg shadow-2xl
+        group-even:right-[initial] group-even:-left-48 transition
         group-hover:scale-[1.04]
 
         group-hover:-translate-x-3
