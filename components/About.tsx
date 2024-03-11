@@ -5,10 +5,13 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <motion.section
+      id="about"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      className="flex flex-col items-center leading-7 mb-40 justify-center [word-spacing:0.4rem] w-60  sm:w-[50%]"
+      className="flex flex-col items-center leading-7 mb-40 justify-center 
+      [word-spacing:0.4rem] w-60  sm:w-[50%]
+      scroll-mt-28"
     >
       <SectionHead>About Me</SectionHead>
       <p className="sm:text-lg ">

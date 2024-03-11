@@ -1,8 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import clsx from "clsx";
 export const Header = () => {
+  const [activeSection, setActiveSection] = useState("Home");
+
   return (
     <header className="z-50 relative flex items-center ">
       <motion.div
@@ -13,14 +18,32 @@ export const Header = () => {
                      top-0  sm:w-[36rem] rounded-full  "
       >
         <nav className=" flex items-center justify-center p-3 text-gray-500 overflow-hidden">
-          <ul className="flex gap-5 sm:gap-8">
+          <ul className="flex  gap-5 sm:gap-8">
             {links.map((link) => (
-              <li
-                className=" cursor-pointer text-[0.6rem] sm:text-lg hover:text-gray-950 transition"
+              <Link
+                href={link.hash}
+                onClick={() => setActiveSection(link.name)}
+                className={clsx(
+                  " relative cursor-pointer text-[0.6rem] sm:text-lg hover:text-gray-950 transition px-2 py-1",
+                  { "text-white hover:text-white": link.name === activeSection }
+                )}
                 key={link.hash}
               >
                 {link.name}
-              </li>
+                {link.name === activeSection && (
+                  <motion.span
+                    // layoutId="activeSection"
+                    // transition={{
+                    //   type:"just",
+                    //   stiffness: 900,
+                    //   damping: 300,
+                    // }}
+                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0 }}
+                    className=" transition  delay-1000 absolute bg-gray-950 inset-0 rounded-full -z-10"
+                  ></motion.span>
+                )}
+              </Link>
             ))}
           </ul>
         </nav>
