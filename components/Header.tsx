@@ -18,13 +18,13 @@ export const Header = () => {
                      top-0  sm:w-[36rem] rounded-full  "
       >
         <nav className=" flex items-center justify-center p-3 text-gray-500 overflow-hidden">
-          <ul className="flex  gap-5 sm:gap-8">
+          <ul className="flex sm:gap-8">
             {links.map((link) => (
               <Link
                 href={link.hash}
                 onClick={() => setActiveSection(link.name)}
                 className={clsx(
-                  " relative cursor-pointer text-[0.6rem] sm:text-lg hover:text-gray-950 transition px-2 py-1",
+                  " relative cursor-pointer text-[0.6rem] sm:text-sm hover:text-gray-950 transition px-2 py-1",
                   { "text-white hover:text-white": link.name === activeSection }
                 )}
                 key={link.hash}
@@ -40,7 +40,7 @@ export const Header = () => {
                     // }}
                     animate={{ opacity: 1 }}
                     initial={{ opacity: 0 }}
-                    className=" transition  delay-1000 absolute bg-gray-950 inset-0 rounded-full -z-10"
+                    className=" transition   absolute bg-gray-950 inset-0 rounded-full -z-10"
                   ></motion.span>
                 )}
               </Link>
