@@ -14,14 +14,16 @@ const Project = () => {
   const { ref, inView } = useInView({
     threshold: 0.4, // the element is considered in view if 40% of it is visible
   });
+
   // Use the active section context to get the function to set the active section
-  const { setActiveSection } = useActiveSection();
+  const { setActiveSection, timeOfLastClick } = useActiveSection();
+
   // Use the useEffect hook to set the active section to "Projects" when the element comes into view
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("Projects");
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, timeOfLastClick]);
 
   // Return the JSX for the Project component
   return (
