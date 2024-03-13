@@ -1,16 +1,29 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { TfiDownload } from "react-icons/tfi";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/context/activeSectionContext";
 
 const Intro = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+  const { setActiveSection } = useActiveSection();
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection]);
+
   return (
     <motion.section
+      ref={ref}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="flex mb-40 transition ease-in duration-700   md:flex-row flex-col-reverse items-center justify-center gap-10 w-full h-full mt-20 "

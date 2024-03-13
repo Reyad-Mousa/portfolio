@@ -1,10 +1,22 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHead from "./SectionHead";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/context/activeSectionContext";
 const About = () => {
+  // useInView is catch section head
+  const { ref, inView } = useInView({ threshold: 0.75 }); // threshold main section view % of page
+  const { setActiveSection, timeOfLastClick } = useActiveSection();
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      //make move active section to next section smother than active section
+      setActiveSection("About");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
   return (
     <motion.section
+      ref={ref}
       id="about"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
