@@ -11,15 +11,15 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/activeSectionContext";
 
 const Intro = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-  });
-  const { setActiveSection } = useActiveSection();
+  // useInView is catch section head
+  const { ref, inView } = useInView({ threshold: 0.75 }); // threshold main section view % of page
+  const { setActiveSection, timeOfLastClick } = useActiveSection();
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      //make move active section to next section smother than active section
       setActiveSection("Home");
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, timeOfLastClick]);
 
   return (
     <motion.section
