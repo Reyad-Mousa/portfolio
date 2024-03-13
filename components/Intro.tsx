@@ -18,7 +18,7 @@ const Intro = () => {
       ref={ref}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="flex mb-40 transition ease-in duration-700   md:flex-row flex-col-reverse items-center justify-center gap-10 w-full h-full mt-20 "
+      className="flex transition ease-in duration-700   md:flex-row flex-col-reverse items-center justify-center gap-10 w-full h-full my-20 "
     >
       <div className="flex flex-col justify-between gap-10 ">
         <div className=" text-lg sm:text-3xl  [word-spacing:0.5rem] w-60  sm:w-[17rem]">
@@ -31,17 +31,17 @@ const Intro = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <div className="flex gap-3 flex-col sm:flex-row ">
+          <div className="flex gap-4 flex-col sm:flex-row  items-center ">
             <Link
               href="#contact"
-              className="focus:scale-110 hover:scale-110 active:scale-105 transition flex items-center gap-4 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full"
+              className="focus:scale-110 hover:scale-110 active:scale-105 transition flex items-center text-center gap-4 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full"
             >
               Contact Me her <HiOutlineArrowLongRight />
             </Link>
             <Link
               href="/Cv.pdf"
               //   download
-              className="focus:scale-110 hover:scale-110 active:scale-105 transition flex items-center gap-4 bg-white shadow-xl hover:bg-gray-700 hover:text-white text-gray-950 font-bold py-2 px-4 rounded-full"
+              className="focus:scale-110 hover:scale-110 active:scale-105 transition flex items-center text-center gap-4 bg-white shadow-xl hover:bg-gray-700 hover:text-white text-gray-950 font-bold py-2 px-4 rounded-full"
             >
               Download CV <TfiDownload />
             </Link>

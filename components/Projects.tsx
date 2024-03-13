@@ -33,14 +33,16 @@ export default function Projects({
       }}
     >
       <section
-        className=" group rounded-lg relative flex flex-col sm:flex-row gap-4 mb-9 bg-gray-100 max-w-[42rem] sm:max-h-[20rem] min-h-[20rem] border border-black/5 overflow-hidden
-    hover:bg-gray-200 transition" // CSS classes for styling
+        className=" group rounded-lg relative flex flex-col sm:flex-row gap-4 mb-9
+         bg-gray-100 max-w-[42rem] 
+        sm:max-h-[20rem] min-h-[20rem] border border-black/5 overflow-hidden
+      hover:bg-gray-200 transition" 
       >
         <div
           className=" flex flex-col  p-5 sm:py-12 gap-3 sm:max-w-[60%]
-         sm:group-even:ml-[18rem]  " // CSS classes for styling
+         sm:group-even:ml-[18rem]  " 
         >
-          <h2 className="text-xl font-bold">{title}</h2>{" "}
+          <h2 className="text-xl font-bold">{title}</h2>
           {/*// the title of the */}
           project
           <p>{description}</p>
@@ -68,7 +70,7 @@ export default function Projects({
         
         group-even:group-hover:translate-x-3
         group-even:group-hover:-translate-y-3
-        group-even:group-hover:rotate-2" // CSS classes for styling
+        group-even:group-hover:rotate-2" 
           src={imageUrl} // the image URL of the project
           alt="Project I Worked on" // alt text for the image
           quality={95} // the quality of the image

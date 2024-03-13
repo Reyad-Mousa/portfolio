@@ -22,7 +22,7 @@ const Skills = () => {
     }),
   };
   return (
-    <section className=" w-60  sm:w-1/2" ref={ref} id="skills">
+    <section className=" w-60 scroll-mt-28 my-20 sm:w-1/2" ref={ref} id="skills">
       <SectionHead>Skills</SectionHead>
       <ul className="flex flex-wrap gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (

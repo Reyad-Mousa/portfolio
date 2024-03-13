@@ -13,7 +13,7 @@ const About = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      className="flex flex-col items-center leading-7 mb-40 justify-center 
+      className="flex flex-col items-center leading-7 my-20 justify-center 
       [word-spacing:0.4rem] w-60  sm:w-[50%]
       scroll-mt-28"
     >
