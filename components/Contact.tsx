@@ -32,7 +32,7 @@ const Contact = () => {
   }, [done]);
 
   return (
-    <section ref={ref} id="contact" className=" scroll-mt-20 my-20 mb-40">
+    <section ref={ref} id="contact" className=" scroll-mt-28 my-20 mb-20">
       <SectionHead>Contact Me</SectionHead>
       <p className=" text-gray-800">
         Contact Me Direct :{" "}
