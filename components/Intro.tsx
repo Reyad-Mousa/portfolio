@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useActiveSectionInView } from "@/lib/hooks";
 
 const Intro = () => {
-  const { ref } = useActiveSectionInView("Home");
+  const { ref } = useActiveSectionInView("Home", 0.5);
 
   // useInView is catch section head
   return (

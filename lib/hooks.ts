@@ -3,9 +3,12 @@ import { useActiveSection } from "@/context/activeSectionContext";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-export function useActiveSectionInView(SectionName: SectionName) {
+export function useActiveSectionInView(
+  SectionName: SectionName,
+  threshold = 0.75
+) {
   const { ref, inView } = useInView({
-    threshold: 0.4, // the element is considered in view if 40% of it is visible
+    threshold, // the element is considered in view if 40% of it is visible
   });
 
   // Use the active section context to get the function to set the active section
