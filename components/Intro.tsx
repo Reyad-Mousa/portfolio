@@ -7,20 +7,12 @@ import { TfiDownload } from "react-icons/tfi";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
-import { useActiveSection } from "@/context/activeSectionContext";
+import { useActiveSectionInView } from "@/lib/hooks";
 
 const Intro = () => {
-  // useInView is catch section head
-  const { ref, inView } = useInView({ threshold: 0.75 }); // threshold main section view % of page
-  const { setActiveSection, timeOfLastClick } = useActiveSection();
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      //make move active section to next section smother than active section
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useActiveSectionInView("Home");
 
+  // useInView is catch section head
   return (
     <motion.section
       ref={ref}

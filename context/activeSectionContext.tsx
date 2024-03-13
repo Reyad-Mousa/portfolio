@@ -6,7 +6,7 @@ import { useState, createContext, useContext, ReactNode } from "react";
 import { links } from "@/lib/data";
 
 // Define a type for the section names based on the links data
-type SectionName = (typeof links)[number]["name"];
+export type SectionName = (typeof links)[number]["name"];
 
 // Create a context for the active section. This context will hold the current active section,
 // a function to set the active section, the time of the last click, and a function to set the time of the last click.
