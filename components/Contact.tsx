@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <section ref={ref} id="contact" className=" scroll-mt-28 my-20 mb-20">
       <SectionHead>Contact Me</SectionHead>
-      <p className=" text-gray-800">
+      <p className=" text-gray-800  dark:text-gray-50">
         Contact Me By Filling Out The Form   
         
         
@@ -42,14 +42,14 @@ const Contact = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-4 mt-6 justify-stretch"
+        className="flex flex-col gap-4 mt-6 justify-stretch "
       >
         <input
           required
           name="senderEmail"
           placeholder="Your Email"
           type="email"
-          className="border rounded-xl h-10 px-3"
+          className="border rounded-xl h-10 px-3 dark:bg-gray-50 dark:text-gray-900"
           maxLength={100}
         />
         <textarea
@@ -57,7 +57,7 @@ const Contact = () => {
           maxLength={500}
           required
           placeholder="Your Message"
-          className="min-h-28 border rounded-xl px-3 py-2"
+          className="min-h-28 border rounded-xl px-3 py-2 dark:bg-gray-50 dark:text-gray-900"
         />
         <button
           disabled={pending}

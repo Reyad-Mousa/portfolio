@@ -10,15 +10,16 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 
 const Experience = () => {
-  const { ref } = useActiveSectionInView("Experience" ,0.3);
+  const { ref } = useActiveSectionInView("Experience", 0.3);
 
   return (
     <section ref={ref} id="experience" className="my-20 scroll-mt-28">
       <SectionHead>My Experience</SectionHead>
-      <VerticalTimeline lineColor="#f3f4f6">
+      <VerticalTimeline lineColor="#f3f4f6" className=" dark:text-gray-900">
         {experiencesData.map((item, index) => (
           <Fragment key={index}>
             <VerticalTimelineElement
+            className=" dark:text-gray-900"
               visible={true}
               contentStyle={{
                 background: "#f3f4f6",
@@ -34,8 +35,8 @@ const Experience = () => {
               icon={item.icon}
               iconStyle={{ background: "#fff" }}
             >
-              <h3 className="font-bold">{item.title}</h3>
-              <p>{item.location}</p>
+              <h3 className="font-bold  dark:text-gray-900">{item.title}</h3>
+              <p className=" dark:text-gray-700">{item.location}</p>
               <p className="text-gray-500">{item.description}</p>
             </VerticalTimelineElement>
           </Fragment>
