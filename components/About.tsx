@@ -4,7 +4,7 @@ import SectionHead from "./SectionHead";
 import { motion } from "framer-motion";
 import { useActiveSectionInView } from "@/lib/hooks";
 const About = () => {
-  const { ref } = useActiveSectionInView("About");
+  const { ref } = useActiveSectionInView("About", 0.75);
 
   return (
     <motion.section
