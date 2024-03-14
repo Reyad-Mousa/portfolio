@@ -21,7 +21,7 @@ export const Header = () => {
         initial={{ y: -100, x: "-50%", opacity: 0 }} // initial position and opacity of the div
         className="fixed    sm:left-1/2 left-[50%]    border border-white border-opacity-40 bg-white bg-opacity-80
                     shadow-lg shadow-black/[0.15] backdrop-blur-[0.1rem] 
-                     top-0  sm:w-[36rem] rounded-full  " // CSS classes for styling
+                     top-auto  sm:w-[36rem] rounded-full  " // CSS classes for styling
       >
         <nav className=" flex items-center justify-center p-3 text-gray-500 overflow-hidden">
           <ul className="flex sm:gap-8">

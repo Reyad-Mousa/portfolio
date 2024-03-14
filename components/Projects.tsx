@@ -20,7 +20,7 @@ export default function Projects({
   // Use the useScroll hook to get the scroll progress of the div
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["-1 1", "1.1 1"],
+    offset: ["-1 1", "0.9 1"],
   });
 
   // Return the JSX for the Projects component

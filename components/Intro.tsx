@@ -46,18 +46,12 @@ const Intro = () => {
               Download CV <TfiDownload />
             </Link>
           </div>
-          <button className="flex gap-5 justify-evenly sm:justify-normal flex-row font-bold py-2 pl-4 text-3xl rounded-full">
+          <button className="flex gap-5 justify-center sm:justify-normal flex-row font-bold py-2 pl-4 text-3xl rounded-full">
             <Link
               href="https://www.linkedin.com/in/reyad-mousa-81956821a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIIpdr2YdRO6S22J4naVwnA%3D%3D"
               className="focus:scale-110 hover:scale-110 active:scale-105 transition hover:text-blue-600"
             >
               <BsLinkedin />
-            </Link>
-            <Link
-              href="https://whatsapp.com/"
-              className="focus:scale-110 hover:scale-110 active:scale-105 transition hover:text-green-600"
-            >
-              <FaWhatsapp />
             </Link>
             <Link
               href="https://github.com/Reyad-Mousa"
