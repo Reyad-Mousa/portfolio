@@ -10,7 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 
 const Experience = () => {
-  const { ref } = useActiveSectionInView("Experience");
+  const { ref } = useActiveSectionInView("Experience" ,0.3);
 
   return (
     <section ref={ref} id="experience" className="my-20 scroll-mt-28">
