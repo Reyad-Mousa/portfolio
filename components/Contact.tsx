@@ -35,14 +35,9 @@ const Contact = () => {
     <section ref={ref} id="contact" className=" scroll-mt-28 my-20 mb-20">
       <SectionHead>Contact Me</SectionHead>
       <p className=" text-gray-800">
-        Contact Me Direct :{" "}
-        <a
-          className="underline text-gray-700 font-mono"
-          href="mailto:example@gmail.com"
-        >
-          example@gmail.com {"    "}
-        </a>{" "}
-        Our Trough This Form
+        Contact Me By Filling Out The Form   
+        
+        
       </p>
 
       <form
