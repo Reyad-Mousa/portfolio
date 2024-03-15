@@ -21,9 +21,10 @@ export const Header = () => {
         initial={{ y: -100, x: "-50%", opacity: 0 }} // initial position and opacity of the div
         className="fixed    sm:left-1/2 left-[50%]    border border-white border-opacity-40 bg-white bg-opacity-80
                     shadow-lg shadow-black/[0.15] backdrop-blur-[0.1rem] 
-                     top-auto  sm:w-[36rem] rounded-full  " // CSS classes for styling
+                     top-auto  sm:w-[36rem] rounded-full  
+                     dark:bg-slate-950 dark:border-black/40"
       >
-        <nav className=" flex items-center justify-center p-3 text-gray-500 overflow-hidden">
+        <nav className=" flex items-center justify-center px-3 py-1 text-gray-500 overflow-hidden">
           <ul className="flex sm:gap-8">
             {links.map((link) => (
               <Link
@@ -34,7 +35,11 @@ export const Header = () => {
                 }}
                 className={clsx(
                   " relative cursor-pointer text-[0.6rem] sm:text-sm hover:text-gray-950 transition px-2 py-1",
-                  { "text-white hover:text-white": link.name === activeSection } // if the link is the active section, add the text-white and hover:text-white classes
+                  "dark:hover:text-gray-300  ",
+                  {
+                    "text-white hover:text-white dark:text-gray-300  dark:hover:text-gray-100":
+                      link.name === activeSection,
+                  } // if the link is the active section, add the text-white and hover:text-white classes
                 )}
                 key={link.hash} // the key for the map function is the hash from the link data
               >
@@ -44,7 +49,8 @@ export const Header = () => {
                   <motion.span
                     animate={{ opacity: 1 }} // animate the span to fade in
                     initial={{ opacity: 0 }} // initial opacity of the span
-                    className="absolute bg-gray-950 inset-0 rounded-full -z-10" // CSS classes for styling
+                    className="absolute bg-gray-950 inset-0 rounded-full -z-10
+                    dark:bg-slate-800  dark:hover:text-gray-300"
                   ></motion.span> // this span is only rendered if the link is the active section
                 )}
               </Link>

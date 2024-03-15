@@ -34,14 +34,14 @@ export default function Projects({
     >
       <section
         className=" group rounded-lg relative flex flex-col sm:flex-row gap-4 mb-9
-         bg-gray-100 max-w-[42rem] 
-        sm:max-h-[20rem] min-h-[20rem] border border-black/5 overflow-hidden
-      hover:bg-gray-200 transition
-      dark:bg-gray-800 "
+                  bg-gray-100 max-w-[42rem] 
+                   sm:max-h-[20rem] min-h-[20rem] border border-black/5 overflow-hidden
+                  hover:bg-gray-200 transition
+                  dark:text-white dark:bg-white/10 dark:hover:bg-white/20"
       >
         <div
           className=" flex flex-col  p-5 sm:py-12 gap-3 sm:max-w-[60%]
-         sm:group-even:ml-[18rem]  "
+                      sm:group-even:ml-[18rem]  "
         >
           <h2 className="text-xl font-bold">{title}</h2>
           {/*// the title of the */}
@@ -51,7 +51,8 @@ export default function Projects({
           <ul className="flex flex-wrap gap-3">
             {tags.map((tag, index) => (
               <li
-                className="bg-gray-800 dark:bg-gray-50 dark:text-gray-900   text-white px-3 py-1 rounded-full"
+                className="bg-gray-80  text-white px-3 py-1 rounded-full
+                         dark:bg-gray-800 dark:text-gray-300 "
                 key={index}
               >
                 {tag}
@@ -62,16 +63,16 @@ export default function Projects({
         </div>
         <Image
           className="w-[29rem]  sm:absolute  sm:-right-48  sm:top-8  rounded-lg shadow-2xl
-        group-even:right-[initial] group-even:-left-48 transition
-        group-hover:scale-[1.04]
+                    group-even:right-[initial] group-even:-left-48 transition
+                    group-hover:scale-[1.04]
 
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
+                    group-hover:-translate-x-3
+                    group-hover:translate-y-3
+                    group-hover:-rotate-2
         
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:-translate-y-3
-        group-even:group-hover:rotate-2"
+                    group-even:group-hover:translate-x-3
+                    group-even:group-hover:-translate-y-3
+                    group-even:group-hover:rotate-2"
           src={imageUrl} // the image URL of the project
           alt="Project I Worked on" // alt text for the image
           quality={95} // the quality of the image

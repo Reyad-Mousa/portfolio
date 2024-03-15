@@ -35,9 +35,7 @@ const Contact = () => {
     <section ref={ref} id="contact" className=" scroll-mt-28 my-20 mb-20">
       <SectionHead>Contact Me</SectionHead>
       <p className=" text-gray-800  dark:text-gray-50">
-        Contact Me By Filling Out The Form   
-        
-        
+        Contact Me By Filling Out The Form
       </p>
 
       <form
@@ -49,7 +47,7 @@ const Contact = () => {
           name="senderEmail"
           placeholder="Your Email"
           type="email"
-          className="border rounded-xl h-10 px-3 dark:bg-gray-50 dark:text-gray-900"
+          className="border rounded-xl h-10 px-3 dark:bg-white/10 dark:border-black/40 dark:text-gray-300"
           maxLength={100}
         />
         <textarea
@@ -57,7 +55,7 @@ const Contact = () => {
           maxLength={500}
           required
           placeholder="Your Message"
-          className="min-h-28 border rounded-xl px-3 py-2 dark:bg-gray-50 dark:text-gray-900"
+          className="min-h-28 border rounded-xl px-3 py-2 dark:bg-white/10 dark:border-black/40 dark:text-gray-300"
         />
         <button
           disabled={pending}

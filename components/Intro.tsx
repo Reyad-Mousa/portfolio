@@ -34,7 +34,7 @@ const Intro = () => {
           <div className="flex gap-4 flex-col sm:flex-row  items-center ">
             <Link
               href="#contact"
-              className="focus:scale-110 hover:scale-110 active:scale-105 transition flex items-center text-center gap-4 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full"
+              className="focus:scale-110 hover:scale-110 active:scale-105 transition flex items-center text-center gap-4 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full dark:bg-white/10"
             >
               Contact Me her <HiOutlineArrowLongRight />
             </Link>

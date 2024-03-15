@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { ActiveSectionProvider } from "@/context/activeSectionContext";
-import ThemBtn from "@/components/ThemBtn";
+import ThemBtn from "@/components/ThemeBtn";
+import ThemeContextProvider from "@/context/themeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,11 +28,13 @@ export default function RootLayout({
           <div className="bg-purple-300 absolute top-[-6rem]  h-[15.25rem] -z-10 w-[15.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
           <div className="bg-blue-200 absolute    top-[-6rem]  h-[15.25rem] -z-10 w-[15.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] "></div>
         </div>
-        <ActiveSectionProvider>
-          <Header />
-          {children}
-        </ActiveSectionProvider>
-        <ThemBtn />
+        <ThemeContextProvider>
+          <ActiveSectionProvider>
+            <Header />
+            {children}
+            <ThemBtn />
+          </ActiveSectionProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

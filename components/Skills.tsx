@@ -22,13 +22,19 @@ const Skills = () => {
     }),
   };
   return (
-    <section className=" w-60 scroll-mt-28 my-20 sm:w-1/2" ref={ref} id="skills">
+    <section
+      className=" w-60 scroll-mt-28 my-20 sm:w-1/2"
+      ref={ref}
+      id="skills"
+    >
       <SectionHead>Skills</SectionHead>
-      <ul className="flex flex-wrap gap-2 text-lg text-gray-800">
+      <ul
+        className="flex flex-wrap gap-2 text-lg text-gray-800 "
+      >
         {skillsData.map((skill, index) => (
           <motion.li
             className="bg-white border border-black/[0.1] px-5 py-3 rounded-xl
-            dark:bg-gray-50 dark:text-gray-900"
+            dark:bg-white/10 dark:text-gray-300"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
