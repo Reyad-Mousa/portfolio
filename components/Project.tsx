@@ -9,7 +9,7 @@ import { useActiveSectionInView } from "@/lib/hooks";
 
 // Define the Project component
 const Project = () => {
-  const { ref } = useActiveSectionInView("Projects", 0.35);
+  const { ref } = useActiveSectionInView("Projects", 0.33);
   // Return the JSX for the Project component
   return (
     <section ref={ref} id="projects" className=" scroll-mt-28">
