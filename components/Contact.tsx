@@ -40,14 +40,14 @@ const Contact = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-4 mt-6 justify-stretch "
+        className="flex flex-col gap-4 mt-6 justify-stretch sm:w-[30rem]"
       >
         <input
           required
           name="senderEmail"
           placeholder="Your Email"
           type="email"
-          className="border rounded-xl h-10 px-3 dark:bg-white/10 dark:border-black/40 dark:text-gray-300"
+          className="border  rounded-xl h-10 px-3 dark:bg-white/10 dark:border-black/40 dark:text-gray-300"
           maxLength={100}
         />
         <textarea
@@ -55,7 +55,7 @@ const Contact = () => {
           maxLength={500}
           required
           placeholder="Your Message"
-          className="min-h-28 border rounded-xl px-3 py-2 dark:bg-white/10 dark:border-black/40 dark:text-gray-300"
+          className="min-h-28 sm:h-[12rem] border rounded-xl px-3 py-2 dark:bg-white/10 dark:border-black/40 dark:text-gray-300"
         />
         <button
           disabled={pending}
