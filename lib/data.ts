@@ -92,11 +92,13 @@ export const projectsData = [
   },
   {
     title: "Game Shop",
+    description: "",
     tags: ["React", "Css", "JavaScript"],
     imageUrl: pro1,
   },
   {
     title: "Test Profile ",
+    description: "",
     tags: ["Html", "Css", "JaveScript"],
     imageUrl: pro3,
   },
