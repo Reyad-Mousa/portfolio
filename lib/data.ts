@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import pro1 from "@/public/pro1.png";
 import pro2 from "@/public/pro2.png";
 import pro3 from "@/public/pro3.png";
+import weather from "@/public/weather.png";
 
 export const links = [
   {
@@ -62,31 +63,40 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Game Shop",
+    title: "Weather Website",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Css", "JavaScript"],
-    imageUrl: pro1,
+      "I worked as a Frontend developer react (nextJs) . Features : search any city , dark mode ",
+    tags: [
+      "React",
+      "Next js",
+      "Tailwind",
+      "lucide-react",
+      "Rest Api",
+      "Context Hook",
+    ],
+    imageUrl: weather,
   },
   {
     title: "Simple Shop",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "I worked as a Frontend developer react (nextJs) . Features : filter Product , add Product to cart , dark mode ",
     tags: [
       "React",
-      "JavaScript",
       "Next.js",
       "Tailwind",
       "Context Hook",
       "React-Icons",
-      "Reast-Api",
+      "Rest-Api",
     ],
     imageUrl: pro2,
   },
   {
-    title: "Fake Profile ",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+    title: "Game Shop",
+    tags: ["React", "Css", "JavaScript"],
+    imageUrl: pro1,
+  },
+  {
+    title: "Test Profile ",
     tags: ["Html", "Css", "JaveScript"],
     imageUrl: pro3,
   },
